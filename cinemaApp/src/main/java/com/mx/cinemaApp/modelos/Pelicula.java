@@ -2,8 +2,20 @@ package com.mx.cinemaApp.modelos;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+@Entity
+@Table(name="peliculas")
 public class Pelicula {
 	//Agregan atributos por defecto
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY) //valor autoincrementable generado por mysql
 	private int id;
 	private String titulo;
 	private int duracion=500;
@@ -11,7 +23,10 @@ public class Pelicula {
 	private String genero;
 	private String imagen;
 	private Date fechaEstreno;
-	private String Estatus="activo";
+	private String Estatus="Activa";
+	//@Transient
+	@OneToOne
+	@JoinColumn(name="idDetalle")
 	private Detalle detalle;
 	public Pelicula() {
 		System.out.println("instancia creada de clase pelicula");

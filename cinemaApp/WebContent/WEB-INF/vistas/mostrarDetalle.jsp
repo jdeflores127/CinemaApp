@@ -47,7 +47,7 @@
 				<td><fmt:formatDate pattern="dd-mm-yyyy"
 						value="${pelicula.fechaEstreno}" /></td>
 				<c:choose>
-					<c:when test="${pelicula.status=='Activo'}">
+					<c:when test="${pelicula.estatus=='Activo'}">
 						<td class="alert alert-success"><c:out value="Activo"/></td>
 					</c:when>
 					<c:otherwise>

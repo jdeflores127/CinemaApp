@@ -78,11 +78,12 @@
         <div class="row">
 			<div class="col-sm-3">
 				<div class="form-group">
-					<label for="clasificacion">Clasificacion</label> 
+					<label for="clasificacion">Clasificacion de la pelicula</label> 
 					<form:select
 						id="clasificacion" path="clasificacion" class="form-control">
-						<form:option id="optionB15" value="B15">B15</form:option>
-						<form:option id="optionPG" value="PG">PG</form:option>
+						<form:option id="optionB15" value="A">A</form:option>
+						<form:option id="optionPG" value="B">B</form:option>
+						<form:option id="optionR" value="C">C</form:option>
 					</form:select>
 				</div>
 			</div>
