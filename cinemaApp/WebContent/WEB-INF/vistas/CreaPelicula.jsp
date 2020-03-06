@@ -24,7 +24,7 @@
   	<script type="text/javascript" src="${urlPublic}/js/script-file.js"></script>
   </head>
 
-  <body onload="InicializaDatePicker()">
+  <body>
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
